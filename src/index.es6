@@ -10,7 +10,7 @@ const Layout = {
   view (vnode) {
     return m('.o-container--super.app',
       m('section.o-grid',
-        m('aside.o-grid__cell.o-grid__cell--width-15', m(Sidebar)),
+        m('aside.o-grid__cell.o-grid__cell--width-15', m(Sidebar, vnode.attrs)),
         m('main.o-grid__cell.o-grid__cell--width-85', vnode.children)
       )
     )
@@ -19,8 +19,8 @@ const Layout = {
 
 const layoutize = children => {
   return {
-    view () {
-      return m(Layout, m(children))
+    view (vnode) {
+      return m(Layout, vnode.attrs, m(children))
     }
   }
 }
