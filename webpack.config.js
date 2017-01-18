@@ -69,7 +69,7 @@ const config = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new HtmlWebpackPlugin({ title: 'Chocoboys' }),
+    new HtmlWebpackPlugin({ template: 'index.html' }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendors/scripts',
       filename: 'vendors/scripts.js'

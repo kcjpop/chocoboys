@@ -10,8 +10,8 @@ const Layout = {
   view (vnode) {
     return m('.o-container--super.app',
       m('section.o-grid',
-        m('aside.o-grid__cell.o-grid__cell--width-20', m(Sidebar)),
-        m('main.o-grid__cell.o-grid__cell--width-80', vnode.children)
+        m('aside.o-grid__cell.o-grid__cell--width-15', m(Sidebar)),
+        m('main.o-grid__cell.o-grid__cell--width-85', vnode.children)
       )
     )
   }
